@@ -141,10 +141,14 @@
 -(void)pushExpandWithTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    fromViewController.view.frame = [UIScreen mainScreen].bounds;
     
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    toViewController.view.frame = [UIScreen mainScreen].bounds;
     
     UIView *containerView = [transitionContext containerView];
+    containerView.frame = [UIScreen mainScreen].bounds;
+    
     containerView.backgroundColor = [UIColor whiteColor];
     
     
@@ -206,10 +210,14 @@
 -(void)popWithTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    fromViewController.view.frame = [UIScreen mainScreen].bounds;
     
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    toViewController.view.frame = [UIScreen mainScreen].bounds;
     
     UIView *containerView = [transitionContext containerView];
+    containerView.frame = [UIScreen mainScreen].bounds;
+    
     containerView.backgroundColor = [UIColor whiteColor];
     [containerView addSubview:fromViewController.view];
     [containerView addSubview:toViewController.view];
@@ -254,10 +262,14 @@
 -(void)pushWithTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    fromViewController.view.frame = [UIScreen mainScreen].bounds;
     
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    toViewController.view.frame = [UIScreen mainScreen].bounds;
     
     UIView *containerView = [transitionContext containerView];
+    containerView.frame = [UIScreen mainScreen].bounds;
+    
     containerView.backgroundColor = [UIColor whiteColor];
     
     
